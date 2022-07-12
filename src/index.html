@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Template</title>
-  <img src="assets/images/stock-puppy-photo.jpg" alt="such a pup!">
+  <title>Currency Exchanger</title>
 </head>
 <body>
+  <div class="container">
+    <form class="currency-converter">
+      <div class="title">
+        <h1>Currency Converter</h1>
+      </div>
+      <div class="from-currency">
+        <input type="number" id="currencyFrom" value="1"/>
+        <select class="form-control" id="currency">
+          <option value="MXN">Mexican Peso</option>
+          <option value="CHF">Congolese Franc</option>
+          <option value="CAD">Canadian Dollar</option>
+          <option value="VND">Vietnamese Dong</option>
+          <option value="JPY">Japanese Yen</option>
+        </select>
+      </div>
+      <div class="to-currency">
+        <div id="showExchange"></div>
+        <div class="showErrors"></div>
+      </div>
+      <button id="exchange" type="submit" class="btn-success">Exchange</button>
+    </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
