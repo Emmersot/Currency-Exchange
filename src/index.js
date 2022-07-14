@@ -2,32 +2,34 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import './css/styles.css';
-import Exchange from './js/exchange.js';
+import exchange from './js/exchange.js';
 
 function clearFields() {
-  $('#base_code').text("");
+  $('#conversion').val("");
   $('#target_code').text("");
-  $('#showError').text("");
 }
 
 function getElements(response) {
   // if (response.conversion_rates["AUD"]) {
-  if (response.conversion_rates[`${target_code}`]) {
-    $('${target_code}').text(` ${response.conversion_rates['${amount}'].description}`);
+  if (response.result === "success") {
+    console.log(response);
+    $('#showConversion').text(` ${response.conversion_rate}`);
   } else {
     $('.showErrors').text(`There was an error: ${response}`);
   }
 }
 
-async function makeApiCall(currency) {
-  const response = await Exchange.getCurrency(currency);
+async function makeApiCall(target_code) {
+  const response = await exchange.getCurrency(target_code);
+  console.log();
   getElements(response);
 }
 
 $(document).ready(function() {
   $('#exchange').click(function() {
-    let base_code = $('#base_code').val();
+    event.preventDefault();
+    let target_code = $('#target_code').val();
+    makeApiCall(target_code);
     clearFields();
-    makeApiCall(park);
   });
 });

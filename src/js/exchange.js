@@ -1,11 +1,11 @@
 export default class exchange {
-  static async getCurrency(conversion, target_code) {
+  static async getCurrency(target_code) {
     try {
-      const response = await fetch(`https://v6.exchangerate-api.com/v6/7d02dda92110bf24556c9ec1/pair/USD/RUB`);
-    //   if (!response.ok) 
-    //   {
-    //     throw Error(response.statusText);
-    //   }
+      const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${target_code}`);
+      if (!response.ok) 
+      {
+        throw Error(response.statusText);
+      }
       return response.json();
     } catch(error) {
       return error.message;
