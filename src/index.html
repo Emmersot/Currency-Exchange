@@ -5,26 +5,104 @@
 </head>
 <body>
   <div class="container">
-    <form class="currency-converter">
-      <div class="title">
-        <h1>Currency Converter</h1>
+    <div class="title">
+      <h1>Currency Converter</h1>
+    </div>
+      <form id="currency-converter">
+        <div class="from-currency">
+          <label for="target">
+            Currency you have
+          </label>
+            <input 
+              type="text" 
+              id="base_code"
+              value="USD"
+              required
+            />
+            <div class="to-currency">
+              <label for="target">
+                Input the target currency
+              </label>
+                <input 
+                  type="text" 
+                  id="target_code"
+                  value="EUR"
+                />
+            </div>
+            <br>
+          <div class="conversion-result">
+            <div id="showConversion"></div>
+            <div class="showErrors"></div>
+          </div>
+          <br>
+        <button 
+          id="exchange" 
+          type="submit" 
+          class="btn-success">
+          Exchange
+        </button>
+        <br>
+        <p>*Any currency code works</p>
+      </form>
       </div>
-      <div class="from-currency">
-      <label for="target">Input the target currency</label>
-      <input type="text" id="target_code">
-        <input type="number" id="currencyFrom" value="1"/>
-        <select class="form-control" id="base_code">
-          <option value="USD">USD</option>
-        </select>
-      </div>
-      <div class="to-currency">
-        <div id="showConversion"></div>
-        <div class="showErrors"></div>
-      </div>
-      <button id="exchange" type="submit" class="btn-success">Exchange</button>
-    </form>
-      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h4>Cheat Sheet</h4>
+      <h6>*Not all codes are included</h6>
+      <p><strong>Currency Code</strong>---------<strong>Currency Name</strong>----------------<strong>Country</strong> </p>
+        <p>AED  ---------------------UAE Dirham	United-------------Arab Emirates</p>
+        <p>AFN  ---------------------Afghan Afghani-----------------Afghanistan</p>
+        <p>AUD  ---------------------Australian Dollar---------------Australia</p>
+        <p>BRL  ---------------------Brazilian Real-------------------Brazil</p>
+        <p>BSD  ---------------------Bahamian Dollar---------------Bahamas</p>
+        <p>BZD	---------------------Belize Dollar-------------------Belize</p>
+        <p>CAD	---------------------Canadian Dollar---------------Canada</p>
+        <p>CHF	---------------------Swiss Franc--------------------Switzerland</p>
+        <p>CNY	---------------------Chinese Renminbi-------------China</p>
+        <p>COP	---------------------Colombian Peso---------------Colombia</p>
+        <p>CRC	---------------------Costa Rican Colon-------------Costa Rica</p>
+        <p>CUP	---------------------Cuban Peso--------------------Cuba</p>
+        <p>EUR	---------------------Euro----------------------------European Union</p>
+        <p>GBP	---------------------Pound Sterling-----------------United Kingdom</p>
+        <p>HKD	---------------------Hong Kong Dollar-------------Hong Kong</p>
+        <p>INR	---------------------Indian Rupee-------------------India</p>
+        <p>IQD	---------------------Iraqi Dinar----------------------Iraq</p>
+        <p>IRR	---------------------Iranian Rial---------------------Iran</p>
+        <p>ISK	---------------------Icelandic Króna-----------------Iceland</p>
+        <p>JMD	---------------------Jamaican Dollar---------------Jamaica</p>
+        <p>JPY	---------------------Japanese Yen-------------------Japan</p>
+        <p>KRW	---------------------South Korean Won-----------South Korea</p>
+        <p>MXN	---------------------Mexican Peso----------------Mexico</p>
+        <p>NOK	---------------------Norwegian Krone------------Norway</p>
+        <p>NZD	---------------------New Zealand Dollar----------New Zealand</p>
+        <p>PHP	---------------------Philippine Peso---------------Philippines</p>
+        <p>RUB	---------------------Russian Ruble----------------Russia</p>
+        <p>SAR	---------------------Saudi Riyal-------------------Saudi Arabia</p>
+        <p>SEK	---------------------Swedish Krona---------------Sweden</p>
+        <p>SGD	---------------------Singapore Dollar------------Singapore</p>
+        <p>THB	---------------------Thai Baht--------------------Thailand</p>
+        <p>TWD	---------------------New Taiwan Dollar---------Taiwan</p>
+        <p>UAH	---------------------Ukrainian Hryvnia-----------Ukraine</p>
+        <p>USD	---------------------United States Dollar---------United States</p>
+        <p>VND	---------------------Vietnamese Đồng-----------Vietnam</p>
+        <p>ZWL	---------------------Zimbabwean Dollar----------Zimbabwe</p>
+        </p>
     </div>
   </div>
+  
 </body>
 </html>
